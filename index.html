@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="th">
   <head>
-    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="theme-color" content="#261449" /><title>Starlight Spin</title><link rel="stylesheet" href="/src/styles.css" />
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="theme-color" content="#261449" /><title>Starlight Spin</title><link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
     <main class="app-shell">
       <div class="glow glow-one"></div><div class="glow glow-two"></div>
-      <header class="topbar"><div class="brand"><span class="brand-orb">✦</span><span>Starlight Spin</span></div><div class="top-actions"><button class="icon-button" id="soundToggle" aria-label="ปิดเสียง">♬</button><button class="icon-button" id="helpButton" aria-label="วิธีใช้งาน">?</button></div></header>
+      <header class="topbar"><div class="brand"><span class="brand-orb">✦</span><span>Starlight Spin</span></div><div class="top-actions"><button class="icon-button" id="soundToggle" aria-label="ปิดเสียง">♬</button></div></header>
       <section class="hero-copy"><p class="eyebrow">✦ &nbsp; YOUR LUCKY MOMENT</p><h1>วงล้อแห่งโชคชะตา</h1><p class="subtitle">ใส่ตัวละครของคุณ แล้วปล่อยให้ดวงดาวเป็นผู้เลือก</p></section>
       <section class="workspace">
         <aside class="control-panel card"><div class="panel-heading"><div><span class="section-kicker">ตั้งค่าวงล้อ</span><h2>ปรับแต่งการสุ่ม</h2></div><span>⚙</span></div>
@@ -14,12 +14,10 @@
           <label class="field-label" for="roundCount">รอบหมุน <span id="roundCountLabel">5 รอบ</span></label><div class="number-control"><button id="roundMinus">−</button><strong id="roundCountValue">5</strong><button id="roundPlus">+</button></div><input id="roundCount" class="range-input round-range" type="range" min="1" max="20" value="5"><div class="range-labels"><span>เร็ว</span><span>ตื่นเต้นสุด ๆ</span></div>
           <div class="divider"></div><div class="status-row"><span>ตัวละครพร้อมสุ่ม</span><strong id="filledStatus">0/6</strong></div><button class="clear-button" id="clearButton">♲ &nbsp; ล้างภาพทั้งหมด</button><p class="storage-note">ข้อมูลและภาพจะถูกบันทึกไว้ในเบราว์เซอร์เครื่องนี้อัตโนมัติ</p>
         </aside>
-        <div class="wheel-stage"><div class="wheel-hint" id="wheelHint">เพิ่มภาพให้ครบทุกช่องก่อนเริ่ม</div><div class="wheel-wrap"><div class="pointer"><span></span></div><div class="wheel" id="wheel"><div class="wheel-inner-ring"></div><div class="wheel-center">✦<small>SPIN</small></div></div></div><button class="spin-button" id="spinButton"><span class="spin-icon">↻</span><span id="spinLabel">หมุนเลย!</span></button><p class="helper-text" id="helperText">อัปโหลดภาพอีก 6 ช่อง เพื่อปลดล็อกวงล้อ</p></div>
+        <div class="wheel-stage"><div class="wheel-hint" id="wheelHint">เพิ่มภาพให้ครบทุกช่องก่อนเริ่ม</div><div class="wheel-wrap"><div class="pointer"><span></span></div><div class="wheel" id="wheel"><div class="wheel-inner-ring"></div><div class="wheel-center">✦<small>SPIN</small></div></div></div><button class="spin-button" id="spinButton"><span class="spin-icon">↻</span><span id="spinLabel">หมุนเลย!</span></button><p class="helper-text" id="helperText">อัปโหลดภาพอีก 6 ช่อง เพื่อปลดล็อกวงล้อ</p><div class="result-card" id="winnerResult" hidden><p class="eyebrow">THE STARS HAVE SPOKEN</p><h2>ผู้โชคดีคือ</h2><div class="result-content"><div class="result-image"><img id="winnerImage" alt=""></div><strong id="winnerName"></strong><button class="result-again" id="againButton">หมุนอีกครั้ง ↻</button></div></div><div class="inline-help"><strong>วิธีใช้งาน</strong><span>1. อัปโหลดภาพให้ครบทุกช่อง</span><span>2. ตั้งจำนวนช่องและรอบหมุน</span><span>3. กด “หมุนเลย!” เพื่อสุ่มตัวละคร</span></div></div>
         <aside class="characters-panel card"><div class="panel-heading"><div><span class="section-kicker">ช่องตัวละคร</span><h2>เลือกผู้โชคดี</h2></div><span class="count-pill" id="countPill">0/6</span></div><div class="character-list" id="characterList"></div><button class="upload-button" id="uploadButton">＋ &nbsp; เพิ่มภาพตัวละคร</button><input id="fileInput" type="file" accept="image/png,image/jpeg,image/webp" hidden></aside>
       </section>
       <footer class="footer-note"><span>✦ &nbsp; ทุกการหมุนคือเรื่องราวบทใหม่</span><span>บันทึกอัตโนมัติบนอุปกรณ์นี้</span></footer>
-      <div class="modal-backdrop" id="winnerBackdrop" hidden><div class="winner-modal"><button class="modal-close" data-close="winner">×</button><div class="confetti">✦　✧　✦</div><p class="eyebrow">THE STARS HAVE SPOKEN</p><h2>ผู้โชคดีคือ...</h2><div class="winner-image"><img id="winnerImage" alt=""></div><h3 id="winnerName"></h3><button class="modal-spin" id="againButton">หมุนอีกครั้ง ↻</button></div></div>
-      <div class="modal-backdrop" id="helpBackdrop" hidden><div class="help-modal"><button class="modal-close" data-close="help">×</button><span class="help-icon">✦</span><h2>วิธีใช้วงล้อ</h2><p>1. อัปโหลดภาพให้ครบทุกช่อง</p><p>2. ปรับจำนวนรอบหมุนได้ตามต้องการ</p><p>3. กด “หมุนเลย!” แล้วรอให้ดวงดาวเลือกผู้โชคดี</p><p class="storage-note">ภาพและการตั้งค่าจะถูกจำไว้ในเครื่องนี้โดยอัตโนมัติ</p></div></div>
-    </main><script src="/app.js"></script>
+    </main><script src="app.js"></script>
   </body>
 </html>
