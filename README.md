@@ -28,8 +28,7 @@ python3 -m http.server 8000
 index.html       โครงหน้าและ modal
 app.js           logic วงล้อ, อัปโหลดภาพ และ IndexedDB
 src/styles.css   สไตล์และ responsive layout
-AGENTS.md        แนวทางสำหรับผู้ช่วยและผู้พัฒนา
-COMMIT_CONVENTION.md  กติกา commit message
+AGENTS.md        แนวทางสำหรับผู้ช่วย ผู้พัฒนา และกติกา commit message
 ```
 
 หมายเหตุ: ข้อมูลใน IndexedDB จะไม่ถูกแชร์ข้าม browser, เครื่อง หรือ domain และการล้าง site data จะลบภาพที่บันทึกไว้

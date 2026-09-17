@@ -33,4 +33,37 @@ python3 -m http.server 8000
 
 ## Commit message
 
-ใช้รูปแบบ Conventional Commits ตามรายละเอียดใน `COMMIT_CONVENTION.md` ตัวอย่างเช่น `feat: add character upload` หรือ `fix: prevent spinning with empty slots`
+ใช้รูปแบบ Conventional Commits:
+
+```text
+<type>: <สรุปการเปลี่ยนแปลงแบบสั้น>
+```
+
+ประเภทที่อนุญาต:
+
+- `feat:` เพิ่มความสามารถใหม่
+- `fix:` แก้ bug หรือพฤติกรรมที่ทำงานผิด
+- `refactor:` ปรับโครงสร้างโค้ดโดยไม่เปลี่ยนความสามารถ
+- `style:` ปรับ CSS, layout หรือ formatting โดยไม่เปลี่ยน logic
+- `docs:` แก้ไข README, AGENTS หรือเอกสาร
+- `test:` เพิ่มหรือแก้ไขการทดสอบ
+- `chore:` งานดูแลโปรเจกต์ เช่น ปรับ config หรือ cleanup
+- `perf:` ปรับปรุงประสิทธิภาพ
+
+กติกา:
+
+- ใช้ภาษาอังกฤษแบบสั้นและชัดเจน
+- เขียนเป็นคำกริยา เช่น `add`, `fix`, `update`, `remove`
+- ไม่ใส่จุดปิดท้ายข้อความ
+- หนึ่ง commit ควรมีหนึ่งเรื่องหลัก
+- ห้ามใช้ข้อความกว้างเกินไป เช่น `update code`
+
+ตัวอย่าง:
+
+```text
+feat: add character image upload
+fix: prevent spinning with empty slots
+style: improve fantasy wheel colors
+docs: update setup guide
+chore: remove unused files
+```
