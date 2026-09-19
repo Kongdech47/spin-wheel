@@ -2,11 +2,11 @@
 
 ## ภาพรวมโปรเจกต์
 
-Starlight Spin เป็นเว็บ static สำหรับสุ่มตัวละครด้วยวงล้อ ใช้เฉพาะ HTML, CSS และ Vanilla JavaScript ไม่มี build step, framework, backend หรือ Docker
+Starlight Spin เป็นเว็บ static สำหรับสุ่มตัวละครด้วยวงล้อ ใช้เฉพาะ HTML, CSS และ Vanilla JavaScript ไม่มี build step, framework หรือ backend
 
 ## โครงสร้างและขอบเขต
 
-- `index.html` เป็น markup หลักและส่วน modal
+- `index.html` เป็น markup หลักและส่วนแสดงผลผู้ชนะใต้ปุ่มหมุน
 - `app.js` เป็น logic การหมุน การอัปโหลดภาพ การตั้งค่า และ IndexedDB
 - `src/styles.css` เป็น visual design และ responsive layout
 - ข้อมูลภาพเก็บใน browser IndexedDB ไม่ควรเพิ่ม backend โดยไม่จำเป็น
@@ -26,7 +26,6 @@ Starlight Spin เป็นเว็บ static สำหรับสุ่มต
 
 ```bash
 node --check app.js
-python3 -m http.server 8000
 ```
 
 ตรวจด้วย browser ว่าเพิ่ม/ลบภาพ, refresh แล้วยังมีข้อมูล, เปลี่ยนจำนวนช่อง, เปลี่ยนรอบหมุน และหมุนหาผู้ชนะได้

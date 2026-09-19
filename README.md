@@ -10,13 +10,7 @@
 
 ## การใช้งาน
 
-เปิด `index.html` ใน browser ได้โดยตรง หรือแนะนำให้ใช้ static server เพื่อให้การทำงานของ IndexedDB และการโหลด asset มีความสม่ำเสมอ:
-
-```bash
-python3 -m http.server 8000
-```
-
-จากนั้นเปิด [http://localhost:8000](http://localhost:8000)
+เปิดไฟล์ `index.html` ใน browser ได้โดยตรง
 
 ## ความสามารถ
 
@@ -31,9 +25,10 @@ python3 -m http.server 8000
 ## โครงสร้างไฟล์
 
 ```text
-index.html       โครงหน้าและ modal
+index.html       โครงหน้าและส่วนแสดงผลผู้ชนะ
 app.js           logic วงล้อ, อัปโหลดภาพ และ IndexedDB
 src/styles.css   สไตล์และ responsive layout
+public/screen.png ภาพหน้าจอสำหรับ README
 AGENTS.md        แนวทางสำหรับผู้ช่วย ผู้พัฒนา และกติกา commit message
 ```
 
