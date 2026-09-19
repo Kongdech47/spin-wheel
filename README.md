@@ -6,6 +6,8 @@
 
 [เปิด Starlight Spin Demo](https://kongdech47.github.io/spin-wheel/)
 
+![ภาพหน้าจอ Starlight Spin](public/screen.png)
+
 ## การใช้งาน
 
 เปิด `index.html` ใน browser ได้โดยตรง หรือแนะนำให้ใช้ static server เพื่อให้การทำงานของ IndexedDB และการโหลด asset มีความสม่ำเสมอ:
